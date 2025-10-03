@@ -6,8 +6,8 @@ function App() {
   const apiKey = import.meta.env.VITE_API_KEY;
   const Urlbase = import.meta.env.VITE_API_BASE_URL
 
-  // console.log("api_key", apiKey)
-  // console.log("url", Urlbase)
+  console.log("api_key", apiKey)
+  console.log("url", Urlbase)
 
   const handleDownload = async () => {
     if (!archivo) {
