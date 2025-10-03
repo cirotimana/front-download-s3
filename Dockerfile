@@ -14,6 +14,7 @@ COPY . .
 
 COPY .env .env
 
+
 # Build de la aplicación
 RUN npm run build
 
