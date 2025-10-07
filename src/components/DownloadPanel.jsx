@@ -167,7 +167,15 @@ function DownloadPanel() {
           />
         </div>
 
-        <button onClick={handleDownload} className="btn-primary">
+        <button 
+        onClick={handleDownload} 
+        className="btn-primary"
+        disabled={!archivo}
+        style={{
+            opacity: !archivo ? 0.6 : 1,
+            cursor: !archivo ? "not-allowed" : "pointer",
+        }}
+        >
           Descargar Archivo
         </button>
       </div>

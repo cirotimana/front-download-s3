@@ -10,7 +10,7 @@ function App() {
           Sistema de Gestion <span className="app-title-accent">Digital</span>
         </h1>
         <p className="app-subtitle">
-          Plataforma unificada de descarga y procesamiento automatico
+          Plataforma unificada de descarga y procesamiento automatico para recaudadores
         </p>
       </div>
       
