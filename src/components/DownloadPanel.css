@@ -1,0 +1,140 @@
+.download-panel {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.2);
+}
+
+.download-panel-header {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-panel-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.download-panel-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.download-panel-title {
+  margin: 0 0 8px 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.download-panel-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.download-panel-body {
+  padding: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-select, 
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.form-select:hover, 
+.form-input:hover {
+  border-color: #dc2626;
+}
+
+.form-select:focus, 
+.form-input:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
