@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import "./DownloadPanel.css";
+import { FaDownload } from "react-icons/fa6";
 
 function DownloadPanel() {
   const [archivo, setArchivo] = useState("");
@@ -115,7 +116,7 @@ function DownloadPanel() {
   return (
     <div className="download-panel">
       <div className="download-panel-header">
-        <div className="download-panel-icon">📥</div>
+        <div className="download-panel-icon"><FaDownload /></div>
         <h2 className="download-panel-title">Sistema de Descarga</h2>
         <p className="download-panel-subtitle">
           Ingresa el nombre del archivo que deseas descargar

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import "./ProcessPanel.css";
+import { FaGetPocket } from "react-icons/fa6";
 
 function ProcessPanel() {
   const [tipo, setTipo] = useState("conciliacion");
@@ -74,12 +75,15 @@ function ProcessPanel() {
         });
         return; // detener aqui
       }
+      const fechaCompleta = `${fecha}-01`
 
-      dateParam = formatearMes(fecha);
-      const [año] = fecha.split("-");
-      const nombreMes = new Date(`${fecha}-01`).toLocaleString("es-ES", {
+      dateParam = formatearMes(fechaCompleta);
+      console.log("dateparam para mes es: ", dateParam)
+
+      const [año, mes] = fecha.split("-");
+      const nombreMes = new Date(mes).toLocaleString("es-ES", {
         month: "long",
-      });
+      });      
       mensajeFecha = `del mes de ${nombreMes} de ${año}`;
     }
 
@@ -106,6 +110,8 @@ function ProcessPanel() {
             d.getMonth() + 1
             }/${d.getFullYear()}${mensajeExtra}`;
         }
+
+        console.log("dataparam para dia es: ", dateParam)
     }
     // Confirmacion antes de ejecutar
     const confirmacion = await Swal.fire({
@@ -169,7 +175,7 @@ function ProcessPanel() {
   return (
     <div className="process-panel">
       <div className="process-panel-header">
-        <div className="process-panel-icon">⚙️</div>
+        <div className="process-panel-icon"><FaGetPocket /></div>
         <h2 className="process-panel-title">Procesos Automaticos</h2>
         <p className="process-panel-subtitle">
           Ejecuta procesos de conciliacion y liquidacion
